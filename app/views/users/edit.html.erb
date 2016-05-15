@@ -1,0 +1,13 @@
+
+<h1>edit yo self</h1>
+
+<%= form_for @user, :url => user_path,
+:html => { :multipart => true } do |f| %>
+  <%=f.label "email" %>
+	<%=f.text_field :email %>
+	<%=f.label "password" %>
+	<%=f.text_field :password %>
+  <%= f.file_field :image %>
+	<%=f.submit %>
+<% end %>
+

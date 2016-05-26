@@ -1,2 +1,9 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<%= form_for @user, :url => user_path,
+:html => { :multipart => true } do |f| %>
+  <%=f.label "email" %>
+	<%=f.text_field :email %>
+	<%=f.label "password" %>
+	<%=f.text_field :password %>
+  <%= f.file_field :image %>
+	<%=f.submit %>
+	<% end %>
